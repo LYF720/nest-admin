@@ -32,7 +32,7 @@ export class UserEntity {
   public email: string
 
   @ApiProperty({ type: String, description: '所属状态: 1-有效，0-禁用', enum: $enum(StatusValue).getValues() })
-  @Column({ type: 'tinyint', default: StatusValue.NORMAL, comment: '所属状态: 1-有效，0-禁用' })
+  @Column({ type: 'int', default: StatusValue.NORMAL, comment: '所属状态: 1-有效，0-禁用' })
   public status: StatusValue
 
   @ApiProperty({ type: String, description: '头像url' })
@@ -40,7 +40,7 @@ export class UserEntity {
   public avatar: string
 
   @ApiProperty({ type: Number, description: '帐号类型：0-超管， 1-普通用户', enum: $enum(UserType).getValues() })
-  @Column({ type: 'tinyint', default: UserType.ORDINARY_USER, comment: '帐号类型：0-超管， 1-普通用户' })
+  @Column({ type: 'int', default: UserType.ORDINARY_USER, comment: '帐号类型：0-超管， 1-普通用户' })
   public type: UserType
 
   @ApiProperty({ type: Date, description: '创建时间' })

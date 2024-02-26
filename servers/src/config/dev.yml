@@ -29,6 +29,20 @@ db:
     synchronize: true
     supportBigNumbers: true
     bigNumberStrings: true
+  pgsql:
+    host: 'localhost'
+    username: 'postgres'
+    password: 'postgres'
+    database: 'nestjs'
+    port: 5432
+    # charset: 'utf8mb4'
+    # logger: 'advanced-console'
+    # logging: true
+    # multipleStatements: true
+    # dropSchema: false
+    # synchronize: true
+    # supportBigNumbers: true
+    # bigNumberStrings: true
 
 # redis 配置
 redis:

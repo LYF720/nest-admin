@@ -56,13 +56,11 @@ import { PostModule } from './system/post/post.module'
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
         return {
-          type: 'mysql',
-          // 可能不再支持这种方式，entities 将改成接收 实体类的引用
-          //
+          type: 'postgres', 
           // entities: [`${__dirname}/**/*.entity{.ts,.js}`],
           autoLoadEntities: true,
           keepConnectionAlive: true,
-          ...config.get('db.mysql'),
+          ...config.get('db.pgsql'),
           // cache: {
           //   type: 'ioredis',
           //   ...config.get('redis'),

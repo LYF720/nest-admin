@@ -52,11 +52,11 @@ npm run dev
 
 后端
 
-> 后端需要 ```MySql``` 、```Redis``` 环境
+> 后端需要 ```pgsql``` 、```Redis``` 环境
 
-本项目使用 ```TypeOrm``` 连接 ```MySql``` 数据库， 运行前请在 ```servers/src/config/dev.yml``` 文件中配置好数据库连接
+本项目使用 ```TypeOrm``` 连接 ```pgsql``` 数据库， 运行前请在 ```servers/src/config/dev.yml``` 文件中配置好数据库连接
 
-```MySql``` 数据库文件在 ```nest-admin/db/kapok.sql``` ，可以通过 ```MySQL WorkBench``` 或 ```Navicat``` 等工具软件导入。
+```pgsql``` 数据库文件在 ```nest-admin/db/kapok-pg.sql``` ，可以通过 ```pgsql WorkBench``` 或 ```Navicat``` 等工具软件导入。
 
 ```sh
 # 打开后端根目录

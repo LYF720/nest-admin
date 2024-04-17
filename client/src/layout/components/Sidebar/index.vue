@@ -53,10 +53,6 @@ const isCollapse = computed(() => !appStore.sidebar.opened)
   :deep(.scrollbar-wrapper) {
     overflow-x: hidden !important;
 
-    .el-scrollbar__view {
-      height: 100%;
-    }
-
     .el-scrollbar__bar.is-vertical {
       right: 0px;
     }

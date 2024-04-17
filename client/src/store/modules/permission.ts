@@ -16,7 +16,15 @@ const hasPermission = (route: RouteRecordRaw, menus: MenuApiResult[]): boolean =
   // route 设置了 hidden 隐藏的 不需要判断权限
   if (route.meta?.hidden) return true
   // 当父级路由不匹配，但该路由子级路由有权限时 父级路由自动拥有权限
-  if (route.children && route.children.length > 0) return hasPermission(route.children[0], menus)
+  // if (route.children && route.children.length > 0) return hasPermission(route.children[0], menus)
+  if (route.children && route.children.length > 0) {
+    for (let i = 0; i < route.children.length; i++) {
+      const has = hasPermission(route.children[i], menus)
+      if (has) {
+        return true
+      }
+    }
+  }
   return hasPerm
 }
 
